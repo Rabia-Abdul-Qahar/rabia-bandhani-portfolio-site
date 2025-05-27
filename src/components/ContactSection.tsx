@@ -29,16 +29,16 @@ const ContactSection = () => {
     setIsLoading(true);
 
     try {
-      // Here you would integrate with Resend API
-      // For now, we'll simulate the email sending
-      console.log("Sending email with data:", formData);
+      // Create mailto link with form data
+      const mailtoLink = `mailto:rabiarajput0300@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      )}`;
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      window.location.href = mailtoLink;
       
       toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
+        title: "Email Client Opened!",
+        description: "Your default email client should open with the message pre-filled.",
       });
       
       // Reset form
@@ -51,7 +51,7 @@ const ContactSection = () => {
     } catch (error) {
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: "Failed to open email client. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -63,8 +63,8 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      value: "rabia@example.com",
-      href: "mailto:rabia@example.com"
+      value: "Let's connect!",
+      href: "mailto:rabiarajput0300@gmail.com"
     },
     {
       icon: <Phone className="h-5 w-5" />,
@@ -126,9 +126,9 @@ const ContactSection = () => {
             </div>
 
             {/* Contact Form */}
-            <Card>
+            <Card className="shadow-lg border-0 bg-background/50 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle>Send Me a Message</CardTitle>
+                <CardTitle className="text-2xl">Send Me a Message</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -145,6 +145,7 @@ const ContactSection = () => {
                         onChange={handleInputChange}
                         required
                         placeholder="Your full name"
+                        className="border-2 focus:border-primary"
                       />
                     </div>
                     <div>
@@ -159,6 +160,7 @@ const ContactSection = () => {
                         onChange={handleInputChange}
                         required
                         placeholder="your.email@example.com"
+                        className="border-2 focus:border-primary"
                       />
                     </div>
                   </div>
@@ -175,6 +177,7 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="What's this about?"
+                      className="border-2 focus:border-primary"
                     />
                   </div>
 
@@ -190,16 +193,17 @@ const ContactSection = () => {
                       required
                       rows={5}
                       placeholder="Tell me about your project or idea..."
+                      className="border-2 focus:border-primary resize-none"
                     />
                   </div>
 
                   <Button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-3 text-base font-medium"
                   >
                     {isLoading ? (
-                      "Sending..."
+                      "Opening Email Client..."
                     ) : (
                       <>
                         <Send className="mr-2 h-4 w-4" />
