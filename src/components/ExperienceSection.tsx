@@ -5,12 +5,26 @@ import { Calendar, MapPin } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Bachelor's in Computer Science",
-      company: "University",
-      location: "Pakistan",
-      period: "2021 - Present",
+      title: "Trainee Engineer",
+      company: "Hamdard University",
+      location: "Karachi, Pakistan",
+      period: "April 2024 - Oct 2024",
+      type: "Experience",
+      description: "Worked as a trainee engineer supporting academic operations and leading departmental initiatives while providing hands-on instruction in data analytics.",
+      highlights: [
+        "Assisted senior faculty in developing and updating undergraduate course and lab outlines in line with HEC guidelines",
+        "Led a team to manage departmental marketing across all social media platforms during tenure",
+        "Conducted lab sessions and provided hands-on instruction in Data Analytics",
+        "Contributed to the creation of advanced lab manuals to enhance student learning and engagement"
+      ]
+    },
+    {
+      title: "Bachelor of Engineering in Software Engineering",
+      company: "Mehran University of Engineering and Technology",
+      location: "Jamshoro, Pakistan",
+      period: "Oct 2018 - Dec 2022",
       type: "Education",
-      description: "Currently pursuing Bachelor's degree with focus on software engineering, algorithms, and data structures. Maintaining excellent academic performance while working on various programming projects.",
+      description: "Completed Bachelor's degree with focus on software engineering, algorithms, and data structures. Maintained excellent academic performance while working on various programming projects.",
       highlights: [
         "Strong foundation in programming fundamentals",
         "Active participation in coding competitions",
@@ -18,42 +32,49 @@ const ExperienceSection = () => {
       ]
     },
     {
-      title: "Software Development Intern",
-      company: "Tech Startup",
+      title: "Intern",
+      company: "Interns Pakistan",
       location: "Remote",
-      period: "Summer 2023",
+      period: "Oct 2022 - Nov 2022",
       type: "Experience",
-      description: "Worked on developing web applications using modern technologies. Collaborated with senior developers to deliver high-quality software solutions.",
+      description: "Completed comprehensive web development training and successfully delivered a functional WordPress website, gaining hands-on experience in modern web technologies.",
       highlights: [
-        "Developed responsive web applications",
-        "Collaborated in an agile development environment",
-        "Gained experience with version control and deployment"
+        "Completed self-paced training in HTML, CSS, JavaScript, PHP, and WordPress",
+        "Applied skills to successfully develop and deliver a functional WordPress website as part of internship work"
       ]
     },
     {
-      title: "Data Science Bootcamp",
-      company: "Online Learning Platform",
-      location: "Online",
-      period: "2023",
-      type: "Certification",
-      description: "Completed intensive data science program covering machine learning, statistics, and data visualization. Worked on real-world projects with industry datasets.",
+      title: "Intern",
+      company: "The Sparks Foundation",
+      location: "Remote",
+      period: "Dec 2021 - Jan 2022",
+      type: "Experience",
+      description: "Led comprehensive data science projects focusing on data analysis and visualization using Python programming and Jupyter notebooks.",
       highlights: [
-        "Mastered Python libraries for data science",
-        "Completed 5 end-to-end ML projects",
-        "Learned advanced statistical analysis techniques"
+        "Led various data science projects using Python and Jupyter, delivering insights through effective data analysis and visualization"
       ]
     },
     {
-      title: "Freelance Web Developer",
-      company: "Self-Employed",
+      title: "Intern",
+      company: "LetsGrowMore",
       location: "Remote",
-      period: "2022 - 2023",
+      period: "Dec 2021 - Jan 2022",
       type: "Experience",
-      description: "Built custom websites for small businesses and startups. Managed client relationships and delivered projects on time and within budget.",
+      description: "Executed end-to-end data science projects, demonstrating proficiency in Python programming and delivering actionable business insights.",
       highlights: [
-        "Successfully completed 10+ client projects",
-        "Improved client online presence by 40% on average",
-        "Developed strong project management skills"
+        "Led and executed data science projects using Python and Jupyter, delivering impactful insights and solutions"
+      ]
+    },
+    {
+      title: "Intern",
+      company: "Gexton",
+      location: "Hyderabad, Pakistan",
+      period: "Dec 2019 - Feb 2020",
+      type: "Experience",
+      description: "Gained extensive experience in Java development through hands-on projects and contributed to innovative software solutions.",
+      highlights: [
+        "Worked on a variety of Java projects ranging from beginner to advanced levels",
+        "Contributed to the design and development of innovative software solutions using Java"
       ]
     }
   ];
